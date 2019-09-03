@@ -1,0 +1,33 @@
+{
+  "name": "jsonresume-theme-japanese-cv-style",
+  "version": "0.1.0",
+  "description": "Japanese style CV Theme for JSON Resume",
+  "author": "kurone-kito",
+  "license": "MIT",
+  "keywords": [
+    "JSON Resume",
+    "Themes",
+    "CV"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style/issues"
+  },
+  "homepage": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=8.16"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2",
+    "resume-cli": "^1.2.7"
+  }
+}

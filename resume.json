@@ -1,0 +1,41 @@
+{
+  "basics": {
+    "name": "黒音キト",
+    "label": "バーチャル黒猫エンジニア",
+    "picture": "",
+    "email": "krone@kit.black",
+    "phone": "08000000000",
+    "website": "https://kit.black",
+    "summary": "Web フロントエンドエンジニア、バーチャルYouTuber、🐱",
+    "location": {
+      "countryCode": "JP",
+      "region": "関東"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "kurone_kito",
+        "url": "https://twitter.com/kurone_kito"
+      },
+      {
+        "network": "YouTube",
+        "username": "kurone_kito",
+        "url": "https://youtube.com/c/kuronekito"
+      }
+    ]
+  },
+  "work": [],
+  "volunteer": [],
+  "education": [],
+  "awards": [],
+  "publications": [],
+  "skills": [],
+  "languages": [
+    {
+      "language": "Japanese",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [],
+  "references": []
+}
