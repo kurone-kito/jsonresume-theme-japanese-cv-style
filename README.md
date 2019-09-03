@@ -1,2 +1,3 @@
-# jsonresume-theme-japanese-cv-style
+# 👤 jsonresume-theme-japanese-cv-style
+
 CV Theme for JSON Resume
