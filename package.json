@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style#readme",
   "scripts": {
+    "start": "resume serve -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
@@ -25,9 +26,14 @@
   },
   "devDependencies": {
     "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.18.2",
     "resume-cli": "^1.2.7"
+  },
+  "dependencies": {
+    "pug": "^2.0.4"
   }
 }
