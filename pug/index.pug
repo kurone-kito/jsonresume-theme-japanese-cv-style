@@ -1,0 +1,27 @@
+doctype html
+html(lang="ja")
+  head
+    include head.pug
+  body
+    h1 職務経歴書
+    p #[span= basics.date] 現在
+    p= basics.name
+    p= basics.summary
+    article
+      h2 経歴
+      - work = work || []
+      each workItem in work
+        h3 #{workItem.location} #{workItem.company} #{workItem.startDate}〜
+        p= workItem.summary
+        ul
+          each item in workItem.highlight
+            li= item
+    article
+      h2 スキル
+      - skills = skills || []
+      each skillItem in skills
+        h3= skillItem.name
+        - let keyword = skillItem.keyword || []
+        ul
+          each item in keyword
+            li= item
