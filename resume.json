@@ -24,18 +24,76 @@
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "流通業",
+      "location": "東京",
+      "position": "上流エンジニア",
+      "startDate": "2019-10-09",
+      "summary": "社員向け流通管理 Web システムの構築",
+      "highlight": [
+        "_**非常に**_ 制約の厳しい中、様々な業務改善提案の発言をしました。",
+        "顧客側の視点に立って、納品物の品質改善に貢献しました。",
+        "JavaScript (ES3)、Internet Explorer8、Excel、Windows7, XP"
+      ]
+    },
+    {
+      "company": "保険・金融業",
+      "location": "東京",
+      "position": "システム保守？",
+      "startDate": "2017-10-09",
+      "summary": "基幹システム更改にあたり、データ移行、不正データ補正作業",
+      "highlight": [
+        "不正データの傾向をデータベース化、対応法をナレッジとして蓄積するシステムを提案した",
+        "Excel, Windows XP"
+      ]
+    }
+  ],
   "volunteer": [],
   "education": [],
   "awards": [],
   "publications": [],
-  "skills": [],
+  "skills": [
+    {
+      "name": "Web フロントエンドエンジニア",
+      "level": "intermediate",
+      "keyword": [
+        "TypeScript",
+        "JavaScript (ES201x)",
+        "React",
+        "MobX/Redux",
+        "Unity",
+        "C#"
+      ]
+    },
+    {
+      "name": "Web デザイナー",
+      "level": "advanced",
+      "keyword": [
+        "HTML5",
+        "jQuery",
+        "UI/UXデザイン",
+        "ロゴデザイン",
+        "Photoshop",
+        "AfterEffects"
+      ]
+    }
+  ],
   "languages": [
     {
       "language": "Japanese",
       "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Reading"
     }
   ],
-  "interests": [],
+  "interests": [
+    {
+      "name": "バーチャルYouTuber",
+      "summary": "バーチャルYouTuberとして、モダンなWeb技術の学習を兼ねた紹介などをしています。"
+    }
+  ],
   "references": []
 }
