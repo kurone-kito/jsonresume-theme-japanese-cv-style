@@ -27,21 +27,42 @@
   "work": [
     {
       "company": "流通業",
+      "details": [
+        "画面設計・UX 設計",
+        "詳細設計",
+        "プログラム設計",
+        "開発環境の QC 改善"
+      ],
+      "env": {
+        "os": ["Windows 7", "Windows XP"],
+        "languages": ["JavaScript (ES3)"],
+        "platforms": ["Excel", "Internet Explorer 8"]
+      },
       "location": "東京",
       "position": "上流エンジニア",
-      "startDate": "2019-10-09",
+      "startDate": "2018-09-24",
       "summary": "社員向け流通管理 Web システムの構築",
       "highlight": [
         "_**非常に**_ 制約の厳しい中、様々な業務改善提案の発言をしました。",
-        "顧客側の視点に立って、納品物の品質改善に貢献しました。",
-        "JavaScript (ES3)、Internet Explorer8、Excel、Windows7, XP"
+        "顧客側の視点に立って、納品物の品質改善に貢献しました。"
       ]
     },
     {
       "company": "保険・金融業",
+      "details": [
+        "新システムへのデータ移行",
+        "顧客情報の不正データ補正",
+        "補正パターンのナレッジを蓄積するデータベース開発"
+      ],
+      "env": {
+        "os": ["Windows XP"],
+        "languages": ["SQL", "VBA"],
+        "platforms": ["Access 2000", "Excel 2000"]
+      },
       "location": "東京",
       "position": "システム保守？",
-      "startDate": "2017-10-09",
+      "startDate": "2016-09-01",
+      "endDate": "2018-08-31",
       "summary": "基幹システム更改にあたり、データ移行、不正データ補正作業",
       "highlight": [
         "不正データの傾向をデータベース化、対応法をナレッジとして蓄積するシステムを提案した",
@@ -55,28 +76,94 @@
   "publications": [],
   "skills": [
     {
-      "name": "Web フロントエンドエンジニア",
-      "level": "intermediate",
+      "category": "言語",
+      "name": "TypeScript",
+      "level": "advanced",
       "keyword": [
-        "TypeScript",
-        "JavaScript (ES201x)",
-        "React",
-        "MobX/Redux",
-        "Unity",
-        "C#"
+        "学習中",
+        "自動でトランスパイルするエコシステムの構築経験あり"
       ]
     },
     {
-      "name": "Web デザイナー",
-      "level": "advanced",
+      "category": "フレームワーク",
+      "name": "React",
+      "level": "intermediate",
       "keyword": [
-        "HTML5",
-        "jQuery",
-        "UI/UXデザイン",
-        "ロゴデザイン",
-        "Photoshop",
-        "AfterEffects"
+        "学習中",
+        "自動でトランスパイルするエコシステムの構築経験あり"
       ]
+    },
+    {
+      "category": "言語",
+      "name": "JavaScript (ES201x)",
+      "level": "intermediate",
+      "keyword": ["学習中", "ES3 は業務で経験あり"]
+    },
+    {
+      "category": "フレームワーク",
+      "name": "MobX",
+      "level": "intermediate",
+      "keyword": ["学習中"]
+    },
+    {
+      "category": "フレームワーク",
+      "name": "Redux",
+      "level": "intermediate",
+      "keyword": ["学習中"]
+    },
+    {
+      "category": "フレームワーク",
+      "name": "Unity",
+      "level": "intermediate",
+      "keyword": ["学習中"]
+    },
+    {
+      "category": "言語",
+      "name": "C#",
+      "level": "intermediate",
+      "keyword": ["Unity で使用", "コンソールアプリのライブラリとしても使用"]
+    },
+    {
+      "category": "Webデザイン",
+      "name": "HTML",
+      "level": "intermediate",
+      "keyword": ["3.2 から Living Standard まで知見あり"]
+    },
+    {
+      "category": "Webデザイン",
+      "name": "CSS",
+      "level": "intermediate",
+      "keyword": ["1〜3 まで知見あり"]
+    },
+    {
+      "category": "フレームワーク",
+      "name": "jQuery",
+      "level": "intermediate",
+      "keyword": ["React が使用できないレガシー Web 環境で重宝している"]
+    },
+    {
+      "category": "Webデザイン",
+      "name": "UI/UX デザイン",
+      "level": "intermediate",
+      "keyword": ["就職まではこちらを専攻していた"]
+    },
+    {
+      "category": "Webデザイン",
+      "name": "ロゴデザイン",
+      "level": "intermediate",
+      "keyword": ["ある程度は"]
+    },
+    {
+      "category": "Webデザイン",
+      "name": "Photoshop",
+      "level": "intermediate",
+      "keyword": ["ある程度は"]
+    },
+    {
+      "category": "Webデザイン",
+      "name": "AfterEffects",
+      "level": "intermediate",
+      "keyword": ["ある程度は"]
     }
   ],
   "languages": [
