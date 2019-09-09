@@ -26,3 +26,7 @@ rules:
         - '*.config.?s'
   no-console:
     - warn
+settings:
+  import/resolver:
+    webpack:
+      config: webpack.config.ts
