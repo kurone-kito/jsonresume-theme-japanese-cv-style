@@ -19,6 +19,7 @@
   "homepage": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style#readme",
   "scripts": {
     "start": "NODE_ICU_DATA=$(node-full-icu-path) gulp",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {

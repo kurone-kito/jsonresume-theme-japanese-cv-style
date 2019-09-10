@@ -1,11 +1,10 @@
 import childProcess, { ChildProcess } from 'child_process';
-import { task, series, watch } from 'gulp';
+import { parallel, task, watch } from 'gulp';
 
-const command = 'node';
 let resume: ChildProcess | undefined;
 
-const spawn = () =>
-  childProcess.spawn(command, ['./node_modules/.bin/resume', 'serve'], {
+const spawn = (command: string, options: string[] = []) =>
+  childProcess.spawn(`./node_modules/.bin/${command}`, options, {
     shell: true,
     stdio: 'inherit'
   });
@@ -14,14 +13,10 @@ task('reload', async () => {
   if (resume) {
     resume.kill();
   }
-  resume = spawn();
+  resume = spawn('resume', ['serve']);
 });
 task('watch', () =>
   watch(['./pug/*.pug', './index.js', './resume.json'], task('reload'))
 );
-task(
-  'default',
-  series(async () => {
-    resume = spawn();
-  }, 'watch')
-);
+task('webpack', () => spawn('webpack', ['--watch']));
+task('default', parallel('watch', 'webpack'));
