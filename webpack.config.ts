@@ -18,6 +18,10 @@ const staticSettings: webpack.Configuration = {
         options: {
           configFile: '.eslintrc.yml'
         }
+      },
+      {
+        test: /\.pug$/,
+        use: 'pug-loader'
       }
     ]
   },
