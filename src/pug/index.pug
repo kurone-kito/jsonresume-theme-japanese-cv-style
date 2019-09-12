@@ -59,19 +59,25 @@ html(lang="ja", prefix="og: http://ogp.me/ns#")
           table.table.table-bordered
             thead
               tr
-                th.col 分類
-                th.col 名称
-                th.col レベル
-                th.col 詳細
+                th 分類
+                th 名称
+                th レベル
+                th 詳細
             tbody
               each skillItem in skills
                 tr
-                  th= skillItem.category
+                  if skillItem.category && skillItem.rowSpan
+                    th(rowspan=skillItem.rowSpan)= skillItem.category
                   td= skillItem.name
                   td= skillItem.level
                   td
                     ul
                       each item in skillItem.keyword || []
                         li= item
+        section
+          h2.h4 その他活動
+          ul
+            each publication in publications
+              li #[strong= publication.name]: #{publication.summary}
         footer.text-right
           p 以上
