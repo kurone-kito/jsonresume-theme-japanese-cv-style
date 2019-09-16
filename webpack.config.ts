@@ -4,6 +4,7 @@ const staticSettings: webpack.Configuration = {
   cache: true,
   devtool: false,
   entry: './src/index.ts',
+  externals: ['full-icu', 'lodash', 'pug', 'ts-polyfill'],
   mode: 'production',
   module: {
     rules: [
