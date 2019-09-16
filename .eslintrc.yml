@@ -1,15 +1,32 @@
 env:
-  browser: true
   es6: true
+  es2020: true
   node: true
 extends:
+  - airbnb-base
   - 'eslint:recommended'
   - 'plugin:prettier/recommended'
+  - prettier/@typescript-eslint
+parser: '@typescript-eslint/parser'
 parserOptions:
-  ecmaFeatures:
-    jsx: true
-  ecmaVersion: 2018
+  ecmaVersion: 2017
   sourceType: module
+plugins:
+  - '@typescript-eslint'
+  - import
+  - prettier
 rules:
+  '@typescript-eslint/no-unused-vars':
+    - error
+    - args: none
+  import/no-extraneous-dependencies:
+    - error
+    - devDependencies:
+        - gulpfile.?s
+        - '*.config.?s'
   no-console:
     - warn
+settings:
+  import/resolver:
+    webpack:
+      config: webpack.config.ts

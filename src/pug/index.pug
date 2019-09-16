@@ -1,0 +1,83 @@
+doctype html
+html(lang="ja", prefix="og: http://ogp.me/ns#")
+  head
+    include head.pug
+  body(itemscope, itemtype="http://schema.org/Person")
+    main
+      article.container
+        header
+          h1.h2.text-center 職務経歴書
+          .text-right
+            p #[span= basics.date] 現在
+            p= basics.name
+          p= basics.summary
+        section
+          h2.h4 職務経歴
+          - work = work || []
+          each workItem in work
+            article.card
+              header.card-header
+                h3.h5 #{workItem.startDate}〜#{workItem.endDate} #{workItem.company}@#{workItem.location}
+              section.card-body
+                .row
+                  .col-lg-7
+                    if workItem.summary
+                      h4.h6 プロジェクト概要
+                      p= workItem.summary
+                    if workItem.position
+                      h4.h6 担当ポジション
+                      p= workItem.position
+                    if workItem.details
+                      h4.h6 業務内容
+                      ul
+                        each item in workItem.details
+                          li= item
+                    if workItem.highlight
+                      h4.h6 取り組み
+                      ul
+                        each item in workItem.highlight
+                          li= item
+                  if workItem.env
+                    .col-lg-5
+                      if workItem.env.os
+                        h4.h6 OS
+                        ul
+                          each os in workItem.env.os
+                            li= os
+                      if workItem.env.languages
+                        h4.h6 言語
+                        ul
+                          each language in workItem.env.languages
+                            li= language
+                      if workItem.env.platforms
+                        h4.h6 フレームワーク・DBなど
+                        ul
+                          each platform in workItem.env.platforms
+                            li= platform
+        section
+          h2.h4 スキル
+          table.table.table-bordered
+            thead
+              tr
+                th 分類
+                th 名称
+                th レベル
+                th 詳細
+            tbody
+              each skillItem in skills
+                tr
+                  if skillItem.category && skillItem.rowSpan
+                    th(rowspan=skillItem.rowSpan)= skillItem.category
+                  td= skillItem.name
+                  td= skillItem.level
+                  td
+                    ul
+                      each item in skillItem.keyword || []
+                        li= item
+        section
+          h2.h4 その他活動
+          ul
+            each publication in publications
+              li #[strong= publication.name]: #{publication.summary}
+        footer.text-right
+          p 以上

@@ -61,4 +61,5 @@ typings/
 .next
 
 # JSON-Resume
-public/
+/public/
+/index.js
