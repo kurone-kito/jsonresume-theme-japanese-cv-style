@@ -34,17 +34,35 @@ const convertSkills = (skills: (Skill & { category?: string })[]) => {
   );
 };
 const convertWork = (work: NonNullable<ResumeSchema['work']>) =>
-  work.map(({ startDate, endDate, ...item }) => ({
-    ...item,
-    startDate: startDate && formatter.format(new Date(startDate)),
-    endDate: endDate ? formatter.format(new Date(endDate)) : '現在'
-  }));
+  _.sortBy(work, ({ startDate }) => startDate)
+    .reverse()
+    .map(({ startDate, endDate, ...item }) => ({
+      ...item,
+      startDate: startDate && formatter.format(new Date(startDate)),
+      endDate: endDate ? formatter.format(new Date(endDate)) : '現在'
+    }));
 
-export const render = ({ skills = [], work = [], ...source }: ResumeSchema) => {
+const convertPublications = (
+  publications: NonNullable<ResumeSchema['publications']>
+) =>
+  _.sortBy(publications, ({ releaseDate }) => releaseDate)
+    .reverse()
+    .map(({ releaseDate, ...item }) => ({
+      releaseDate: releaseDate && formatter.format(new Date(releaseDate)),
+      ...item
+    }));
+
+export const render = ({
+  publications = [],
+  skills = [],
+  work = [],
+  ...source
+}: ResumeSchema) => {
   const additional: ResumeSchema = {
     basics: { date: formatter.format(new Date()) },
-    skills: [...convertSkills(skills)],
-    work: [...convertWork(work)]
+    publications: convertPublications(publications),
+    skills: convertSkills(skills),
+    work: convertWork(work)
   };
   return pug(_.merge(source, additional));
 };

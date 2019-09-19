@@ -1,0 +1,9 @@
+mixin workLayout(title, item)
+  if item
+    h4.h6= title
+    if Array.isArray(item)
+      ul
+        each value in item
+          li= value
+    else
+      p= item

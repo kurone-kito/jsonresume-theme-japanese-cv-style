@@ -1,3 +1,4 @@
+include workLayout.pug
 doctype html
 html(lang="ja", prefix="og: http://ogp.me/ns#")
   head
@@ -6,56 +7,32 @@ html(lang="ja", prefix="og: http://ogp.me/ns#")
     main
       article.container
         header
-          h1.h2.text-center 職務経歴書
+          h1.h4.text-center 職務経歴書
           .text-right
             p #[span= basics.date] 現在
             p= basics.name
           p= basics.summary
         section
-          h2.h4 職務経歴
+          h2.h5 職務経歴
           - work = work || []
           each workItem in work
             article.card
               header.card-header
-                h3.h5 #{workItem.startDate}〜#{workItem.endDate} #{workItem.company}@#{workItem.location}
+                h3.h6 #{workItem.startDate}〜#{workItem.endDate} #{workItem.company}@#{workItem.location}
               section.card-body
                 .row
-                  .col-lg-7
-                    if workItem.summary
-                      h4.h6 プロジェクト概要
-                      p= workItem.summary
-                    if workItem.position
-                      h4.h6 担当ポジション
-                      p= workItem.position
-                    if workItem.details
-                      h4.h6 業務内容
-                      ul
-                        each item in workItem.details
-                          li= item
-                    if workItem.highlight
-                      h4.h6 取り組み
-                      ul
-                        each item in workItem.highlight
-                          li= item
+                  .col-8
+                    +workLayout('プロジェクト概要', workItem.summary)
+                    +workLayout('担当ポジション', workItem.position)
+                    +workLayout('業務内容', workItem.details)
+                    +workLayout('取り組み', workItem.highlights)
                   if workItem.env
-                    .col-lg-5
-                      if workItem.env.os
-                        h4.h6 OS
-                        ul
-                          each os in workItem.env.os
-                            li= os
-                      if workItem.env.languages
-                        h4.h6 言語
-                        ul
-                          each language in workItem.env.languages
-                            li= language
-                      if workItem.env.platforms
-                        h4.h6 フレームワーク・DBなど
-                        ul
-                          each platform in workItem.env.platforms
-                            li= platform
-        section
-          h2.h4 スキル
+                    .col-4
+                      +workLayout('OS', workItem.env.os)
+                      +workLayout('言語', workItem.env.languages)
+                      +workLayout('フレームワーク・DBなど', workItem.env.platforms)
+        section.page
+          h2.h5 スキル
           table.table.table-bordered
             thead
               tr
@@ -75,9 +52,9 @@ html(lang="ja", prefix="og: http://ogp.me/ns#")
                       each item in skillItem.keyword || []
                         li= item
         section
-          h2.h4 その他活動
+          h2.h5 その他活動
           ul
             each publication in publications
-              li #[strong= publication.name]: #{publication.summary}
+              li #[strong= publication.name] - #{publication.releaseDate}: #[br] #{publication.summary}
         footer.text-right
           p 以上

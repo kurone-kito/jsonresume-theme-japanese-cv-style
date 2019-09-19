@@ -1,10 +1,11 @@
 import webpack from 'webpack';
+import packageJson from './package.json';
 
 const staticSettings: webpack.Configuration = {
   cache: true,
   devtool: false,
   entry: './src/index.ts',
-  externals: ['full-icu', 'lodash', 'pug', 'ts-polyfill'],
+  externals: Object.keys(packageJson.dependencies || {}),
   mode: 'production',
   module: {
     rules: [
