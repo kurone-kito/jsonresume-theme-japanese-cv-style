@@ -46,7 +46,7 @@
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
     "resume-cli": "^1.2.7",
-    "ts-loader": "^6.1.0",
+    "ts-loader": "^8.0.1",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3",
     "webpack": "^4.40.2",
