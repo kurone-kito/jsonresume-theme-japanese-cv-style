@@ -23,7 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": ">=8.16"
+    "node": ">=10.23"
   },
   "devDependencies": {
     "@types/eslint": "^6.1.1",
