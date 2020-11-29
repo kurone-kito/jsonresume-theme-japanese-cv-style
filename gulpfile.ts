@@ -6,7 +6,7 @@ let resume: ChildProcess | undefined;
 const spawn = (command: string, options: string[] = []) =>
   childProcess.spawn(`./node_modules/.bin/${command}`, options, {
     shell: true,
-    stdio: 'inherit'
+    stdio: 'inherit',
   });
 
 task('reload', async () => {
