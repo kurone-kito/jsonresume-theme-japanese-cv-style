@@ -1,5 +1,11 @@
+/bin/**
 /coverage/**
 /node_modules/**
 /public/**
 /index.js
+*.json
+*.md
+*.png
 *.pug
+*.yml
+LICENSE

@@ -1,4 +1,5 @@
-import webpack from 'webpack';
+import ESLintPlugin from 'eslint-webpack-plugin';
+import type webpack from 'webpack';
 import packageJson from './package.json';
 
 const staticSettings: webpack.Configuration = {
@@ -9,22 +10,8 @@ const staticSettings: webpack.Configuration = {
   mode: 'production',
   module: {
     rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader'
-      },
-      {
-        test: /\.tsx?$/,
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        options: {
-          configFile: '.eslintrc.yml'
-        }
-      },
-      {
-        test: /\.pug$/,
-        use: 'pug-loader'
-      }
+      { test: /\.tsx?$/, use: 'ts-loader' },
+      { test: /\.pug$/, use: 'pug-loader' }
     ]
   },
   output: {
@@ -33,9 +20,8 @@ const staticSettings: webpack.Configuration = {
     library: 'jsonresume-theme-japanese-cv-style',
     libraryTarget: 'umd'
   },
-  resolve: {
-    extensions: ['.js', '.json', '.ts', '.tsx']
-  },
+  plugins: [new ESLintPlugin({})],
+  resolve: { extensions: ['.js', '.json', '.ts', '.tsx'] },
   target: 'node'
 };
 

@@ -3,18 +3,18 @@ env:
   es2020: true
   node: true
 extends:
-  - airbnb-base
-  - 'eslint:recommended'
-  - 'plugin:prettier/recommended'
+  - eslint:recommended
+  - airbnb-typescript/base
+  - plugin:import/recommended
+  - plugin:import/typescript
+  - plugin:@typescript-eslint/recommended
+  - plugin:prettier/recommended
+  - prettier
   - prettier/@typescript-eslint
 parser: '@typescript-eslint/parser'
 parserOptions:
-  ecmaVersion: 2017
-  sourceType: module
-plugins:
-  - '@typescript-eslint'
-  - import
-  - prettier
+  ecmaVersion: 2020
+  project: ./tsconfig.json
 rules:
   '@typescript-eslint/no-unused-vars':
     - error

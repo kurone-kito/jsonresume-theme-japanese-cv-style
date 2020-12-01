@@ -6,13 +6,13 @@ const pug = require('./pug/index.pug');
 
 const formatter = Intl.DateTimeFormat('ja-JP', {
   year: 'numeric',
-  month: 'long'
+  month: 'long',
 });
 const levelMap = new Map([
   ['beginner', '☆☆☆'],
   ['intermediate', '★☆☆'],
   ['advanced', '★★☆'],
-  ['master', '★★★']
+  ['master', '★★★'],
 ]);
 
 type Skill = NonNullable<ResumeSchema['skills']>[number];
@@ -24,12 +24,12 @@ const convertSkills = (skills: (Skill & { category?: string })[]) => {
     _.sortBy(
       items.map(({ level = '', ...item }) => ({
         level: levelMap.get(level) || level,
-        ...item
+        ...item,
       })),
       ({ level }) => level
     ).map(({ category = '', ...item }, index) => ({
       ...(index ? {} : { category, rowSpan: items.length }),
-      ...item
+      ...item,
     }))
   );
 };
@@ -39,7 +39,7 @@ const convertWork = (work: NonNullable<ResumeSchema['work']>) =>
     .map(({ startDate, endDate, ...item }) => ({
       ...item,
       startDate: startDate && formatter.format(new Date(startDate)),
-      endDate: endDate ? formatter.format(new Date(endDate)) : '現在'
+      endDate: endDate ? formatter.format(new Date(endDate)) : '現在',
     }));
 
 const convertPublications = (
@@ -49,7 +49,7 @@ const convertPublications = (
     .reverse()
     .map(({ releaseDate, ...item }) => ({
       releaseDate: releaseDate && formatter.format(new Date(releaseDate)),
-      ...item
+      ...item,
     }));
 
 export const render = ({
@@ -62,7 +62,7 @@ export const render = ({
     basics: { date: formatter.format(new Date()) },
     publications: convertPublications(publications),
     skills: convertSkills(skills),
-    work: convertWork(work)
+    work: convertWork(work),
   };
   return pug(_.merge(source, additional));
 };
