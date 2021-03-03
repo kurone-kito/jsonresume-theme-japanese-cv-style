@@ -11,18 +11,18 @@ const staticSettings: webpack.Configuration = {
   module: {
     rules: [
       { test: /\.tsx?$/, use: 'ts-loader' },
-      { test: /\.pug$/, use: 'pug-loader' }
-    ]
+      { test: /\.pug$/, use: 'pug-loader' },
+    ],
   },
   output: {
     filename: 'index.js',
     path: __dirname,
     library: 'jsonresume-theme-japanese-cv-style',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   plugins: [new ESLintPlugin({})],
   resolve: { extensions: ['.js', '.json', '.ts', '.tsx'] },
-  target: 'node'
+  target: 'node',
 };
 
 export default (source: webpack.Configuration): webpack.Configuration => ({
