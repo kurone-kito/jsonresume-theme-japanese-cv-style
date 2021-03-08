@@ -57,7 +57,7 @@ export const render = ({
   skills = [],
   work = [],
   ...source
-}: ResumeSchema) => {
+}: ResumeSchema): string => {
   const additional: ResumeSchema = {
     basics: { date: formatter.format(new Date()) },
     publications: convertPublications(publications),
