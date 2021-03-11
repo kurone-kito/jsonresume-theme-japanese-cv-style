@@ -17,8 +17,8 @@ const levelMap = new Map([
 
 type Skill = NonNullable<ResumeSchema['skills']>[number];
 
-const convertSkills = (skills: (Skill & { category?: string })[]) => {
-  return Object.entries(
+const convertSkills = (skills: (Skill & { category?: string })[]) =>
+  Object.entries(
     _.groupBy(skills, ({ category = '' }) => category || '')
   ).flatMap(([, items]) =>
     _.sortBy(
@@ -32,7 +32,7 @@ const convertSkills = (skills: (Skill & { category?: string })[]) => {
       ...item,
     }))
   );
-};
+
 const convertWork = (work: NonNullable<ResumeSchema['work']>) =>
   _.sortBy(work, ({ startDate }) => startDate)
     .reverse()
