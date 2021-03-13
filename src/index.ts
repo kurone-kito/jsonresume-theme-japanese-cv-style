@@ -2,6 +2,7 @@ import _ from 'lodash';
 import 'ts-polyfill/lib/es2019-array';
 import { ResumeSchema } from './resume.schema';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const pug = require('./pug/index.pug');
 
 const formatter = Intl.DateTimeFormat('ja-JP', {
