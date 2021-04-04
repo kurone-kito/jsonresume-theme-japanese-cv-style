@@ -2,7 +2,7 @@ import ESLintPlugin from 'eslint-webpack-plugin';
 import type webpack from 'webpack';
 import packageJson from './package.json';
 
-const staticSettings: webpack.Configuration = {
+export default <webpack.Configuration>{
   cache: true,
   devtool: false,
   entry: './src/index.ts',
@@ -21,11 +21,6 @@ const staticSettings: webpack.Configuration = {
     libraryTarget: 'umd',
   },
   plugins: [new ESLintPlugin({})],
-  resolve: { extensions: ['.js', '.json', '.ts', '.tsx'] },
+  resolve: { extensions: ['.js', '.json', '.ts'] },
   target: 'node',
 };
-
-export default (source: webpack.Configuration): webpack.Configuration => ({
-  ...source,
-  ...staticSettings
-});
