@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import 'ts-polyfill/lib/es2019-array';
-import { ResumeSchema } from './resume.schema';
+import type { ResumeSchema } from './resume.schema';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const pug = require('./pug/index.pug');
 
 const formatter = Intl.DateTimeFormat('ja-JP', {
@@ -17,8 +18,8 @@ const levelMap = new Map([
 
 type Skill = NonNullable<ResumeSchema['skills']>[number];
 
-const convertSkills = (skills: (Skill & { category?: string })[]) => {
-  return Object.entries(
+const convertSkills = (skills: (Skill & { category?: string })[]) =>
+  Object.entries(
     _.groupBy(skills, ({ category = '' }) => category || '')
   ).flatMap(([, items]) =>
     _.sortBy(
@@ -32,7 +33,7 @@ const convertSkills = (skills: (Skill & { category?: string })[]) => {
       ...item,
     }))
   );
-};
+
 const convertWork = (work: NonNullable<ResumeSchema['work']>) =>
   _.sortBy(work, ({ startDate }) => startDate)
     .reverse()
@@ -57,7 +58,7 @@ export const render = ({
   skills = [],
   work = [],
   ...source
-}: ResumeSchema) => {
+}: ResumeSchema): string => {
   const additional: ResumeSchema = {
     basics: { date: formatter.format(new Date()) },
     publications: convertPublications(publications),

@@ -3,6 +3,11 @@
 The theme for [JSON Resume](https://jsonresume.org) specialized in the hire in Japanese IT fields.  
 日本の IT 業界での就職活動に特化した、[JSON Resume](https://jsonresume.org) 専用職務経歴書テーマ。
 
+## System requirement
+
+- x86-64 CPU (Linux/Mac/Windows)
+  - The package uses Chromium internally but may not work correctly on ARM architecture CPUs such as the Apple M1.
+
 ## Usage
 
 ```sh
