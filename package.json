@@ -20,6 +20,8 @@
   "scripts": {
     "lint": "eslint --cache .",
     "prepack": "webpack",
+    "prepare": "run-s prepare:*",
+    "prepare:husky": "husky install",
     "start": "NODE_ICU_DATA=$(node-full-icu-path) gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
