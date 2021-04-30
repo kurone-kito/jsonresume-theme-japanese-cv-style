@@ -1,6 +1,6 @@
+import type { ResumeSchema } from '@kurone-kito/jsonresume-types';
 import _ from 'lodash';
 import 'ts-polyfill/lib/es2019-array';
-import type { ResumeSchema } from './resume.schema';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const pug = require('./pug/index.pug');
