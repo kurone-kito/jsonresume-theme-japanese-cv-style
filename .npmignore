@@ -1,13 +1,9 @@
-.github
 /bin
 /public
 /src
-.eslint*
-.node-version
-.prettierrc*
+.*
 gulpfile.?s
 kito.png
 resume.json
-?sconfig.json
-webpack.config.?s
+*config.*s*
 *.tgz
