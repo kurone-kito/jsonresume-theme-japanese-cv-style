@@ -2,31 +2,29 @@
   "name": "jsonresume-theme-japanese-cv-style",
   "version": "0.4.1",
   "description": "Japanese style CV Theme for JSON Resume",
-  "author": "kurone-kito",
-  "license": "MIT",
   "keywords": [
     "JSON Resume",
     "Themes",
     "CV"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style.git"
-  },
+  "homepage": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style#readme",
   "bugs": {
     "url": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style/issues"
   },
-  "homepage": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style#readme",
+  "license": "MIT",
+  "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
+  "repository": "github:kurone-kito/jsonresume-theme-japanese-cv-style",
   "scripts": {
     "lint": "eslint --cache .",
     "prepack": "webpack",
     "prepare": "run-s prepare:*",
     "prepare:husky": "husky install",
-    "start": "NODE_ICU_DATA=$(node-full-icu-path) gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ICU_DATA=$(node-full-icu-path) gulp"
   },
-  "engines": {
-    "node": ">=12"
+  "dependencies": {
+    "@kurone-kito/jsonresume-types": "^0.2.2",
+    "lodash": "^4.17.21",
+    "ts-polyfill": "^3.8.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
@@ -59,9 +57,10 @@
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0"
   },
-  "dependencies": {
-    "@kurone-kito/jsonresume-types": "^0.2.2",
-    "lodash": "^4.17.21",
-    "ts-polyfill": "^3.8.2"
+  "engines": {
+    "node": ">=12"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
