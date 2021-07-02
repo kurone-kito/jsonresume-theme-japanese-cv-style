@@ -1,6 +1,7 @@
 import type { ResumeSchema } from '@kurone-kito/jsonresume-types';
-import _ from 'lodash';
-import 'ts-polyfill/lib/es2019-array';
+import groupBy from 'lodash.groupby';
+import merge from 'lodash.merge';
+import sortBy from 'lodash.sortby';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const pug = require('./pug/index.pug');
@@ -20,9 +21,9 @@ type Skill = NonNullable<ResumeSchema['skills']>[number];
 
 const convertSkills = (skills: (Skill & { category?: string })[]) =>
   Object.entries(
-    _.groupBy(skills, ({ category = '' }) => category || '')
+    groupBy(skills, ({ category = '' }) => category || '')
   ).flatMap(([, items]) =>
-    _.sortBy(
+    sortBy(
       items.map(({ level = '', ...item }) => ({
         level: levelMap.get(level) || level,
         ...item,
@@ -35,7 +36,7 @@ const convertSkills = (skills: (Skill & { category?: string })[]) =>
   );
 
 const convertWork = (work: NonNullable<ResumeSchema['work']>) =>
-  _.sortBy(work, ({ startDate }) => startDate)
+  sortBy(work, ({ startDate }) => startDate)
     .reverse()
     .map(({ startDate, endDate, ...item }) => ({
       ...item,
@@ -46,7 +47,7 @@ const convertWork = (work: NonNullable<ResumeSchema['work']>) =>
 const convertPublications = (
   publications: NonNullable<ResumeSchema['publications']>
 ) =>
-  _.sortBy(publications, ({ releaseDate }) => releaseDate)
+  sortBy(publications, ({ releaseDate }) => releaseDate)
     .reverse()
     .map(({ releaseDate, ...item }) => ({
       releaseDate: releaseDate && formatter.format(new Date(releaseDate)),
@@ -65,6 +66,6 @@ export const render = ({
     skills: convertSkills(skills),
     work: convertWork(work),
   };
-  return pug(_.merge(source, additional));
+  return pug(merge(source, additional));
 };
 export default render;
