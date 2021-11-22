@@ -8,12 +8,10 @@
     "CV"
   ],
   "homepage": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style#readme",
-  "bugs": {
-    "url": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style/issues"
-  },
+  "bugs": "https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style/issues",
+  "repository": "github:kurone-kito/jsonresume-theme-japanese-cv-style",
   "license": "MIT",
   "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
-  "repository": "github:kurone-kito/jsonresume-theme-japanese-cv-style",
   "scripts": {
     "lint": "eslint --cache .",
     "prepack": "webpack",
