@@ -13,7 +13,12 @@
   "license": "MIT",
   "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
   "scripts": {
-    "lint": "eslint --cache .",
+    "lint": "npm run -s lint:eslint:check && npm run -s lint:prettier:check",
+    "lint:eslint:check": "eslint --cache --format codeframe \"./**/*\"",
+    "lint:eslint:fix": "npm run -s lint:eslint:check -- --fix",
+    "lint:fix": "npm run -s lint:eslint:fix && npm run -s lint:prettier:fix",
+    "lint:prettier:check": "prettier --check \"./**/*\"",
+    "lint:prettier:fix": "prettier --write \"./**/*\"",
     "prepack": "webpack",
     "prepare": "husky install",
     "start": "NODE_ICU_DATA=$(node-full-icu-path) gulp"
