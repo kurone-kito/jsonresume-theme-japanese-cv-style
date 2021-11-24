@@ -5,8 +5,9 @@ The theme for [JSON Resume](https://jsonresume.org) specialized in the hire in J
 
 ## System requirement
 
-- x86-64 CPU (Linux/Mac/Windows)
+- x86-64(**Strongly recommend**) or ARM64 CPU
   - The package uses Chromium internally but may not work correctly on ARM architecture CPUs such as the Apple M1.
+- Linux / macOS / Windows
 - Node.js >= 14 (**Strongly recommend**: If you use this on Node.js v12, you require the [`full-icu`](https://www.npmjs.com/package/full-icu))
 
 ## Usage
@@ -41,3 +42,7 @@ open dist/resume.pdf # Preview
 
 </details>
 <!-- markdownlint-enable MD033 -->
+
+## License
+
+MIT
