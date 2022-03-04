@@ -1,7 +1,6 @@
 endOfLine: lf
 plugins:
   - prettier-plugin-packagejson
-  - prettier-plugin-properties
   - prettier-plugin-sh
   - prettier-plugin-sort-json
 singleQuote: true

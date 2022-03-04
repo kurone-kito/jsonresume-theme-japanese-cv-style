@@ -375,3 +375,6 @@ package-lock.json
 
 ### Text ###
 LICENSE
+
+### Others ###
+.editorconfig
