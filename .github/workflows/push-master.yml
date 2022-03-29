@@ -1,0 +1,57 @@
+name: CI/CD on push the master branch
+on:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    env:
+      INPUT_TOKEN: ''
+      INVALID_DUMMY_TOKEN: invalid-token
+    steps:
+      - name: Get current date for the caching key
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m')"
+      - name: Setup the Chromium browser (Production)
+        if: ${{ !env.ACT }}
+        uses: awalsh128/cache-apt-pkgs-action@v1
+        with:
+          packages: chromium-browser fonts-ipafont wkhtmltopdf
+          version: deploy-${{ steps.date.outputs.date }}
+      - name: Setup the Chromium browser (Local)
+        if: ${{ !!env.ACT }}
+        run: apt-get update && apt-get install --no-install-recommends -y chromium-browser fonts-ipafont wkhtmltopdf
+      - uses: actions/checkout@v2
+      - name: Use the specified version of Node.js
+        uses: actions/setup-node@v2
+        with:
+          cache: ${{ !env.ACT && 'npm' || '' }}
+          node-version-file: .node-version
+      - name: set npm config
+        run: npm config set unsafe-perm true
+      - name: Resolve the dependencies
+        run: PUPPETEER_EXECUTABLE_PATH=$(which chromium-browser) npm ci
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+      - name: Build and release for NPM
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          access: public
+          dry-run: ${{ !!env.ACT }}
+          token: ${{ !env.ACT && secrets.NPM_TOKEN || env.INVALID_DUMMY_TOKEN }}
+      - name: Build the examples
+        run: npm run build:example
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          author: kurone-kito <krone@kit.black>
+          committer: kurone-kito <krone@kit.black>
+          dry_run: ${{ !!env.ACT }}
+          build_dir: dist
+          keep_history: true
+        env:
+          GITHUB_TOKEN: ${{ !env.ACT && secrets.GITHUB_TOKEN || env.INVALID_DUMMY_TOKEN }}

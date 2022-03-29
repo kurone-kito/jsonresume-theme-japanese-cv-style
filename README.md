@@ -23,6 +23,14 @@ node_modules/.bin/hackmyresume BUILD resume.json TO dist/resume.all -t node_modu
 open dist/resume.pdf # Preview
 ```
 
+## Example
+
+- Input
+  - [resume.json](https://github.com/kurone-kito/jsonresume-theme-japanese-cv-style/blob/master/resume.json)
+- Output
+  - [HTML](https://kurone-kito.github.io/jsonresume-theme-japanese-cv-style/)
+  - [PDF](https://kurone-kito.github.io/jsonresume-theme-japanese-cv-style/index.pdf)
+
 ## License
 
 MIT
