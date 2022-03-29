@@ -14,6 +14,7 @@
   "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
   "scripts": {
     "build": "webpack",
+    "build:example": "npx --no-install hackmyresume BUILD resume.json TO dist/index.all -t .",
     "preinstall": "npx -qy npm-force-resolutions || npx -q npm-force-resolutions",
     "lint": "npm run -s lint:eslint:check && npm run -s lint:prettier:check",
     "lint:eslint:check": "eslint --cache --format codeframe \"./**/*\"",
@@ -53,6 +54,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-webpack-plugin": "^3.1.1",
     "gulp": "^4.0.2",
+    "hackmyresume": "^1.9.0-beta",
     "husky": "^7.0.4",
     "prettier": "^2.6.2",
     "pug": "^3.0.2",
