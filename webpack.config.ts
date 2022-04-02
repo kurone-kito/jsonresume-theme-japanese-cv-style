@@ -1,8 +1,8 @@
 import ESLintPlugin from 'eslint-webpack-plugin';
-import type webpack from 'webpack';
+import type { Configuration } from 'webpack';
 import packageJson from './package.json';
 
-export default <webpack.Configuration>{
+export default <Configuration>{
   cache: true,
   devtool: false,
   entry: './src/index.ts',

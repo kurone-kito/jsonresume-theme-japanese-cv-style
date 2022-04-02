@@ -1,4 +1,5 @@
-import childProcess, { ChildProcess } from 'child_process';
+import type { ChildProcess } from 'child_process';
+import childProcess from 'child_process';
 import { parallel, task, watch } from 'gulp';
 
 let resume: ChildProcess | undefined;

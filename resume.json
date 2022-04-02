@@ -1,4 +1,14 @@
 {
+  "awards": [
+    {
+      "flavor": "award",
+      "url": "https://www.jitec.ipa.go.jp",
+      "title": "情報処理技術者試験 ITパスポート試験",
+      "date": "2016-11-01",
+      "awarder": "IPA: 情報処理推進機構",
+      "summary": ""
+    }
+  ],
   "basics": {
     "name": "黒音キト",
     "label": "バーチャル黒猫エンジニア",
@@ -24,56 +34,16 @@
       }
     ]
   },
-  "work": [
+  "education": [],
+  "interests": [],
+  "languages": [
     {
-      "company": "流通業",
-      "details": ["画面設計書作成", "詳細設計書作成", "プログラム設計書作成"],
-      "env": {
-        "os": ["Windows 7", "Windows XP"],
-        "languages": ["JavaScript (ES3)"],
-        "platforms": ["Excel", "Internet Explorer 8"]
-      },
-      "location": "東京",
-      "position": "上流エンジニア",
-      "startDate": "2018-09-24",
-      "summary": "社員向け機器流通管理 Web システムの構築",
-      "highlight": [
-        "非常に制約の厳しい職場環境で、様々な業務改善を提案しました。",
-        "顧客側の視点に立ち、納品物の品質改善に貢献しました。"
-      ]
+      "language": "Japanese",
+      "fluency": "Native speaker"
     },
     {
-      "company": "保険・金融業",
-      "details": [
-        "新システムへのデータ移行",
-        "顧客情報の不正データ補正",
-        "補正パターンのナレッジを蓄積するデータベース開発"
-      ],
-      "env": {
-        "os": ["Windows XP"],
-        "languages": ["SQL", "VBA"],
-        "platforms": ["Access 2000", "Excel 2000"]
-      },
-      "location": "東京",
-      "position": "データ入力",
-      "startDate": "2016-09-01",
-      "endDate": "2018-08-31",
-      "summary": "基幹システム更改にあたり、データ移行、不正データ補正作業",
-      "highlight": [
-        "不正データの傾向をデータベース化、対応法をナレッジとして蓄積するシステムを提案しました。"
-      ]
-    }
-  ],
-  "volunteer": [],
-  "education": [],
-  "awards": [
-    {
-      "flavor": "award",
-      "url": "https://www.jitec.ipa.go.jp",
-      "title": "情報処理技術者試験 ITパスポート試験",
-      "date": "2016-11-01",
-      "awarder": "IPA: 情報処理推進機構",
-      "summary": ""
+      "language": "English",
+      "fluency": "Reading"
     }
   ],
   "publications": [
@@ -84,6 +54,7 @@
       "url": "https://youtube.com/c/kuronekito"
     }
   ],
+  "references": [],
   "skills": [
     {
       "category": "言語",
@@ -176,16 +147,45 @@
       "keyword": ["ある程度は"]
     }
   ],
-  "languages": [
+  "volunteer": [],
+  "work": [
     {
-      "language": "Japanese",
-      "fluency": "Native speaker"
+      "company": "流通業",
+      "details": ["画面設計書作成", "詳細設計書作成", "プログラム設計書作成"],
+      "env": {
+        "os": ["Windows 7", "Windows XP"],
+        "languages": ["JavaScript (ES3)"],
+        "platforms": ["Excel", "Internet Explorer 8"]
+      },
+      "location": "東京",
+      "position": "上流エンジニア",
+      "startDate": "2018-09-24",
+      "summary": "社員向け機器流通管理 Web システムの構築",
+      "highlight": [
+        "非常に制約の厳しい職場環境で、様々な業務改善を提案しました。",
+        "顧客側の視点に立ち、納品物の品質改善に貢献しました。"
+      ]
     },
     {
-      "language": "English",
-      "fluency": "Reading"
+      "company": "保険・金融業",
+      "details": [
+        "新システムへのデータ移行",
+        "顧客情報の不正データ補正",
+        "補正パターンのナレッジを蓄積するデータベース開発"
+      ],
+      "env": {
+        "os": ["Windows XP"],
+        "languages": ["SQL", "VBA"],
+        "platforms": ["Access 2000", "Excel 2000"]
+      },
+      "location": "東京",
+      "position": "データ入力",
+      "startDate": "2016-09-01",
+      "endDate": "2018-08-31",
+      "summary": "基幹システム更改にあたり、データ移行、不正データ補正作業",
+      "highlight": [
+        "不正データの傾向をデータベース化、対応法をナレッジとして蓄積するシステムを提案しました。"
+      ]
     }
-  ],
-  "interests": [],
-  "references": []
+  ]
 }
