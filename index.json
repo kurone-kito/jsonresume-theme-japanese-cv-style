@@ -1,0 +1,145 @@
+{
+  "name": "黒音キト",
+  "info": {
+    "label": "バーチャル黒猫エンジニア",
+    "image": "kito.png",
+    "brief": "Web フロントエンドエンジニア、Web UX デザイナー、バーチャルYouTuber、🐱< にゃーん"
+  },
+  "contact": {
+    "email": "krone@kit.black",
+    "phone": "08000000000",
+    "website": "https://kit.black"
+  },
+  "meta": {
+    "format": "FRESH@^1.0.0-beta",
+    "modified": "2022-04-04T03:08:30.492Z"
+  },
+  "location": {
+    "region": "関東",
+    "country": "JP"
+  },
+  "employment": {
+    "history": [
+      {
+        "position": "上流エンジニア",
+        "employer": "流通業",
+        "summary": "社員向け機器流通管理 Web システムの構築",
+        "current": true,
+        "start": "2018-09-24",
+        "keywords": []
+      },
+      {
+        "position": "データ入力",
+        "employer": "保険・金融業",
+        "summary": "基幹システム更改にあたり、データ移行、不正データ補正作業",
+        "start": "2016-09-01",
+        "end": "2018-08-31",
+        "keywords": []
+      }
+    ]
+  },
+  "service": {},
+  "skills": {
+    "sets": [
+      {
+        "name": "TypeScript",
+        "level": "advanced"
+      },
+      {
+        "name": "React",
+        "level": "intermediate"
+      },
+      {
+        "name": "JavaScript (ES201x)",
+        "level": "advanced"
+      },
+      {
+        "name": "MobX",
+        "level": "intermediate"
+      },
+      {
+        "name": "Redux",
+        "level": "intermediate"
+      },
+      {
+        "name": "Unity",
+        "level": "beginner"
+      },
+      {
+        "name": "C#",
+        "level": "intermediate"
+      },
+      {
+        "name": "HTML",
+        "level": "advanced"
+      },
+      {
+        "name": "CSS",
+        "level": "intermediate"
+      },
+      {
+        "name": "jQuery",
+        "level": "intermediate"
+      },
+      {
+        "name": "UI/UX デザイン",
+        "level": "intermediate"
+      },
+      {
+        "name": "ロゴデザイン",
+        "level": "intermediate"
+      },
+      {
+        "name": "Photoshop",
+        "level": "beginner"
+      },
+      {
+        "name": "AfterEffects",
+        "level": "intermediate"
+      }
+    ]
+  },
+  "writing": [
+    {
+      "title": "バーチャルYouTuber活動",
+      "date": "2018-11-02",
+      "summary": "バーチャルYouTuberとして、モダンなWeb技術の学習を兼ねた紹介などをしています。"
+    }
+  ],
+  "recognition": [
+    {
+      "flavor": "award",
+      "url": "https://www.jitec.ipa.go.jp",
+      "title": "情報処理技術者試験 ITパスポート試験",
+      "date": "2016-11-01",
+      "from": "IPA: 情報処理推進機構",
+      "summary": ""
+    }
+  ],
+  "social": [
+    {
+      "label": "Twitter",
+      "network": "Twitter",
+      "url": "https://twitter.com/kurone_kito",
+      "user": "kurone_kito"
+    },
+    {
+      "label": "YouTube",
+      "network": "YouTube",
+      "url": "https://youtube.com/c/kuronekito",
+      "user": "kurone_kito"
+    }
+  ],
+  "interests": [],
+  "testimonials": 0,
+  "languages": [
+    {
+      "language": "Japanese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Reading"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+awards:
+  -
+    flavor: award
+    url: 'https://www.jitec.ipa.go.jp'
+    title: '情報処理技術者試験 ITパスポート試験'
+    date: '2016-11-01'
+    awarder: 'IPA: 情報処理推進機構'
+    summary: ""
+basics:
+  name: 黒音キト
+  label: バーチャル黒猫エンジニア
+  picture: kito.png
+  email: krone@kit.black
+  phone: '08000000000'
+  website: 'https://kit.black'
+  summary: 'Web フロントエンドエンジニア、Web UX デザイナー、バーチャルYouTuber、🐱< にゃーん'
+  location:
+    countryCode: JP
+    region: 関東
+  profiles:
+    -
+      network: Twitter
+      username: kurone_kito
+      url: 'https://twitter.com/kurone_kito'
+    -
+      network: YouTube
+      username: kurone_kito
+      url: 'https://youtube.com/c/kuronekito'
+education: []
+interests: []
+languages:
+  -
+    language: Japanese
+    fluency: 'Native speaker'
+  -
+    language: English
+    fluency: Reading
+publications:
+  -
+    name: バーチャルYouTuber活動
+    releaseDate: '2018-11-02'
+    summary: バーチャルYouTuberとして、モダンなWeb技術の学習を兼ねた紹介などをしています。
+    url: 'https://youtube.com/c/kuronekito'
+references: []
+skills:
+  -
+    category: 言語
+    name: TypeScript
+    level: advanced
+    keyword:
+      - 学習中
+      - 自動でトランスパイルするエコシステムの構築経験あり
+  -
+    category: フレームワーク
+    name: React
+    level: intermediate
+    keyword:
+      - 学習中
+      - 自動でトランスパイルするエコシステムの構築経験あり
+  -
+    category: 言語
+    name: 'JavaScript (ES201x)'
+    level: advanced
+    keyword:
+      - 学習中
+      - 'ES3 は業務で経験あり'
+  -
+    category: フレームワーク
+    name: MobX
+    level: intermediate
+    keyword:
+      - 学習中
+  -
+    category: フレームワーク
+    name: Redux
+    level: intermediate
+    keyword:
+      - 学習中
+  -
+    category: フレームワーク
+    name: Unity
+    level: beginner
+    keyword:
+      - 学習中
+  -
+    category: 言語
+    name: 'C#'
+    level: intermediate
+    keyword:
+      - 'Unity で使用'
+      - コンソールアプリのライブラリとしても使用
+  -
+    category: Webデザイン
+    name: HTML
+    level: advanced
+    keyword:
+      - '3.2 から Living Standard まで知見あり'
+  -
+    category: Webデザイン
+    name: CSS
+    level: intermediate
+    keyword:
+      - '1〜3 まで知見あり'
+  -
+    category: フレームワーク
+    name: jQuery
+    level: intermediate
+    keyword:
+      - 'React が使用できないレガシー Web 環境で重宝している'
+  -
+    category: Webデザイン
+    name: 'UI/UX デザイン'
+    level: intermediate
+    keyword:
+      - 就職まではこちらを専攻していた
+  -
+    category: Webデザイン
+    name: ロゴデザイン
+    level: intermediate
+    keyword:
+      - ある程度は
+  -
+    category: Webデザイン
+    name: Photoshop
+    level: beginner
+    keyword:
+      - ある程度は
+  -
+    category: Webデザイン
+    name: AfterEffects
+    level: intermediate
+    keyword:
+      - ある程度は
+volunteer: []
+work:
+  -
+    company: 流通業
+    details:
+      - 画面設計書作成
+      - 詳細設計書作成
+      - プログラム設計書作成
+    env:
+      os:
+        - 'Windows 7'
+        - 'Windows XP'
+      languages:
+        - 'JavaScript (ES3)'
+      platforms:
+        - Excel
+        - 'Internet Explorer 8'
+    location: 東京
+    position: 上流エンジニア
+    startDate: '2018-09-24'
+    summary: '社員向け機器流通管理 Web システムの構築'
+    highlight:
+      - 非常に制約の厳しい職場環境で、様々な業務改善を提案しました。
+      - 顧客側の視点に立ち、納品物の品質改善に貢献しました。
+  -
+    company: 保険・金融業
+    details:
+      - 新システムへのデータ移行
+      - 顧客情報の不正データ補正
+      - 補正パターンのナレッジを蓄積するデータベース開発
+    env:
+      os:
+        - 'Windows XP'
+      languages:
+        - SQL
+        - VBA
+      platforms:
+        - 'Access 2000'
+        - 'Excel 2000'
+    location: 東京
+    position: データ入力
+    startDate: '2016-09-01'
+    endDate: '2018-08-31'
+    summary: 基幹システム更改にあたり、データ移行、不正データ補正作業
+    highlight:
+      - 不正データの傾向をデータベース化、対応法をナレッジとして蓄積するシステムを提案しました。
