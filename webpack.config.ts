@@ -1,8 +1,8 @@
 import ESLintPlugin from 'eslint-webpack-plugin';
-import type webpack from 'webpack';
+import type { Configuration } from 'webpack';
 import packageJson from './package.json';
 
-export default <webpack.Configuration>{
+export default <Configuration>{
   cache: true,
   devtool: false,
   entry: './src/index.ts',
@@ -10,15 +10,16 @@ export default <webpack.Configuration>{
   mode: 'production',
   module: {
     rules: [
-      { test: /\.tsx?$/, use: 'ts-loader' },
+      { test: /\.ts$/, use: 'ts-loader' },
       { test: /\.pug$/, use: 'pug-loader' },
     ],
   },
   output: {
     filename: 'index.js',
-    path: __dirname,
+    hashFunction: 'xxhash64', // Solution to Error 0308010C on Node.js 17 + Webpack 5
     library: 'jsonresume-theme-japanese-cv-style',
     libraryTarget: 'umd',
+    path: __dirname,
   },
   plugins: [new ESLintPlugin({})],
   resolve: { extensions: ['.js', '.json', '.ts'] },

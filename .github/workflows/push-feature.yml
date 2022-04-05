@@ -1,0 +1,49 @@
+name: CI on push the feature branches
+on:
+  push:
+    branches:
+      - '*'
+      - '!master'
+permissions:
+  contents: read
+jobs:
+  build:
+    name: Build the production code
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 14.x
+          - 16.x
+          - 17.x
+    env:
+      INPUT_TOKEN: ''
+    steps:
+      - name: Get current date for the caching key
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m')"
+      - name: Setup the Chromium browser (Production)
+        if: ${{ !env.ACT }}
+        uses: awalsh128/cache-apt-pkgs-action@v1
+        with:
+          packages: chromium-browser fonts-ipafont wkhtmltopdf
+          version: build-${{ steps.date.outputs.date }}
+      - name: Setup the Chromium browser (Local)
+        if: ${{ !!env.ACT }}
+        run: apt-get update && apt-get install --no-install-recommends -y chromium-browser fonts-ipafont wkhtmltopdf
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          cache: ${{ !env.ACT && 'npm' || '' }}
+          node-version: ${{ matrix.node-version }}
+      - name: set npm config
+        run: npm config set unsafe-perm true
+      - name: Resolve the dependencies
+        run: PUPPETEER_EXECUTABLE_PATH=$(which chromium-browser) npm ci
+        env:
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+      - name: Testing
+        run: npm run lint
+      - name: Build
+        run: npm pack && npm run build:example

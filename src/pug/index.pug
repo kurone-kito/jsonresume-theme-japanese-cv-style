@@ -1,9 +1,9 @@
 include workLayout.pug
 doctype html
-html(lang="ja", prefix="og: http://ogp.me/ns#")
+html(lang='ja', prefix='og: http://ogp.me/ns#')
   head
     include head.pug
-  body(itemscope, itemtype="http://schema.org/Person")
+  body(itemscope, itemtype='http://schema.org/Person')
     main
       article.container
         header
@@ -14,11 +14,11 @@ html(lang="ja", prefix="og: http://ogp.me/ns#")
           p= basics.summary
         section
           h2.h5 職務経歴
-          - work = work || []
+          - work = work || [];
           each workItem in work
             article.card
               header.card-header
-                h3.h6 #{workItem.startDate}〜#{workItem.endDate} #{workItem.company}@#{workItem.location}
+                h3.h6 #{ workItem.startDate }〜#{ workItem.endDate } #{ workItem.company }@#{ workItem.location }
               section.card-body
                 .row
                   .col-8
@@ -55,6 +55,6 @@ html(lang="ja", prefix="og: http://ogp.me/ns#")
           h2.h5 その他活動
           ul
             each publication in publications
-              li #[strong= publication.name] - #{publication.releaseDate}: #[br] #{publication.summary}
+              li #[strong= publication.name] - #{ publication.releaseDate }: #[br] #{ publication.summary }
         footer.text-right
           p 以上

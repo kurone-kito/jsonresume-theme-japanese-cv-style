@@ -1,17 +1,20 @@
-- let title = `職務経歴書 - ${basics.name}`
-meta(charset="UTF-8")
-meta(http-equiv="X-UA-Compatible", content="IE=edge")
-meta(name="viewport", content="width=device-width, initial-scale=1, viewport-fit=cover")
-meta(name="author" content=basics.name)
-meta(name="description" content=title)
-meta(name="generator" content="JSON Resume")
-meta(name="keywords" content="職務経歴書")
-meta(property="og:title" content=title)
-meta(property="og:type" content="profile")
-meta(property="og:locale" content="ja_JP")
+- let title = `職務経歴書 - ${basics.name}`;
+meta(charset='UTF-8')
+meta(http-equiv='X-UA-Compatible', content='IE=edge')
+meta(
+  name='viewport',
+  content='width=device-width, initial-scale=1, viewport-fit=cover'
+)
+meta(name='author', content=basics.name)
+meta(name='description', content=title)
+meta(name='generator', content='JSON Resume')
+meta(name='keywords', content='職務経歴書')
+meta(property='og:title', content=title)
+meta(property='og:type', content='profile')
+meta(property='og:locale', content='ja_JP')
 if basics.phone
-  meta(property="og:phone_number" content=basics.phone)
+  meta(property='og:phone_number', content=basics.phone)
 if basics.email
-  meta(property="og:email" content=basics.email)
+  meta(property='og:email', content=basics.email)
 title= title
 include styles.pug

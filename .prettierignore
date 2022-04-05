@@ -356,14 +356,25 @@ $RECYCLE.BIN/
 ### THE PROJECT SPECIFIES #################################################
 
 ### Node ###
+# Husky
+.husky/_
+
 # build output
 /index.js
+
+# Dependencies
+package-lock.json
 
 # Ignorefiles
 .*ignore
 
-# JSON
-*.json
+# Version managers
+.node-version
+.nvmrc
+.tool-versions
 
 ### Text ###
 LICENSE
+
+### Others ###
+.editorconfig

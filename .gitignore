@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,vim,visualstudiocode,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,vim,visualstudiocode,windows
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,sublimetext,vim,visualstudiocode,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,sublimetext,vim,visualstudiocode,windows
 
 ### Linux ###
 *~
@@ -103,6 +103,9 @@ web_modules/
 # Optional eslint cache
 .eslintcache
 
+# Optional stylelint cache
+.stylelintcache
+
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
@@ -118,10 +121,12 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
+# dotenv environment variable files
 .env
-.env.test
-.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -144,6 +149,12 @@ public
 # vuepress build output
 .vuepress/dist
 
+# vuepress v2.x temp and cache directory
+.temp
+
+# Docusaurus cache and generated files
+.docusaurus
+
 # Serverless directories
 .serverless/
 
@@ -165,6 +176,48 @@ public
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+### Node Patch ###
+# Serverless Webpack directories
+.webpack/
+
+# Optional stylelint cache
+
+# SvelteKit build / generate output
+.svelte-kit
+
+### SublimeText ###
+# Cache files for Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# Workspace files are user-specific
+*.sublime-workspace
+
+# Project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using Sublime Text
+*.sublime-project
+
+# SFTP configuration file
+sftp-config.json
+sftp-config-alt*.json
+
+# Package control specific files
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+
+# Sublime-github package stores a github token in this file
+# https://packagecontrol.io/packages/sublime-github
+GitHub.sublime-settings
 
 ### Vim ###
 # Swap
@@ -192,15 +245,20 @@ tags
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-*.code-workspace
+!.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
 .history/
+
+# Built Visual Studio Code Extensions
+*.vsix
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
 .ionide
+
+# Support for Project snippet scope
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -228,4 +286,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,vim,visualstudiocode,windows
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,sublimetext,vim,visualstudiocode,windows
+
+### THE PROJECT SPECIFIES #################################################
+
+### Node ###
+# build output
+/index.js
