@@ -1,7 +1,7 @@
 import type { ResumeSchema } from '@kurone-kito/jsonresume-types';
-import groupBy from 'lodash.groupby';
-import merge from 'lodash.merge';
-import sortBy from 'lodash.sortby';
+import groupBy from 'lodash/groupby';
+import merge from 'lodash/merge';
+import sortBy from 'lodash/sortby';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const pug = require('./pug/index.pug');
