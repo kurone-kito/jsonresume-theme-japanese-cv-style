@@ -1,3 +1,22 @@
 {
+  "cSpell.caseSensitive": true,
+  "cSpell.ignorePaths": [
+    ".eslintrc.*",
+    ".git/objects",
+    ".github/CODE_OF_CONDUCT.*",
+    ".github/workflows/*.yml",
+    ".vscode",
+    "node_modules",
+    "package-lock.json"
+  ],
+  "cSpell.words": [
+    "hackmyresume",
+    "japanese",
+    "kito",
+    "kurone",
+    "kuroné",
+    "mkdir",
+    "npmjs"
+  ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
