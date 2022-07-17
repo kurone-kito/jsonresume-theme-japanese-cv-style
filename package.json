@@ -25,7 +25,7 @@
     "lint:prettier:fix": "prettier --write \"./**/*\"",
     "prepack": "webpack",
     "prepare": "husky install",
-    "start": "gulp"
+    "start": "webpack --watch"
   },
   "resolutions": {
     "puppeteer": "^14.1.1"
