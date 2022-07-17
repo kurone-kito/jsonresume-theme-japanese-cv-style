@@ -15,6 +15,7 @@
   "scripts": {
     "build": "webpack",
     "build:example": "npx --no-install hackmyresume BUILD resume.json TO dist/index.all -t .",
+    "clean": "rimraf \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\" \"dist\" \"index.js\"",
     "preinstall": "npx -qy npm-force-resolutions || npx -q npm-force-resolutions",
     "lint": "npm run -s lint:eslint:check && npm run -s lint:prettier:check",
     "lint:eslint:check": "eslint --cache --format codeframe \"./**/*\"",
